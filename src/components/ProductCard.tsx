@@ -3,6 +3,7 @@ import { useCart } from '@/context/CartContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from "@/hooks/use-toast";
+import { Coffee } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -29,9 +30,12 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   };
 
   return (
-    <Card className="w-full max-w-sm">
+    <Card className="w-full max-w-sm hover:shadow-lg transition-shadow duration-300">
       <CardHeader>
-        <CardTitle className="text-lg">{product.name}</CardTitle>
+        <CardTitle className="text-lg flex items-center gap-2">
+          <Coffee className="h-5 w-5" />
+          {product.name}
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <img
@@ -41,7 +45,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         />
         <p className="text-sm text-gray-600 mb-2">{product.description}</p>
         <div className="flex justify-between items-center">
-          <span className="font-bold">${product.price}</span>
+          <span className="font-bold text-lg">${product.price}</span>
           <span className="text-sm text-gray-500">
             Stock: {product.stock}
           </span>

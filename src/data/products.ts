@@ -3,28 +3,28 @@ import { Product } from '@/types';
 export const products: Product[] = [
   {
     id: '1',
-    name: 'Classic White T-Shirt',
-    price: 29.99,
-    description: 'Essential cotton t-shirt for everyday wear',
-    category: 'men',
+    name: 'Ethiopian Yirgacheffe',
+    price: 19.99,
+    description: 'Light roasted Ethiopian coffee with floral and citrus notes',
+    category: 'coffee',
     stock: 50,
     imageUrl: '/placeholder.svg'
   },
   {
     id: '2',
-    name: 'Summer Floral Dress',
-    price: 79.99,
-    description: 'Light and breezy floral print dress',
-    category: 'women',
+    name: 'Colombian Supremo',
+    price: 18.99,
+    description: 'Medium roast with caramel sweetness and nutty undertones',
+    category: 'coffee',
     stock: 30,
     imageUrl: '/placeholder.svg'
   },
   {
     id: '3',
-    name: 'Kids Denim Overalls',
-    price: 45.99,
-    description: 'Comfortable and durable denim overalls',
-    category: 'kids',
+    name: 'Espresso Blend',
+    price: 21.99,
+    description: 'Dark roasted blend perfect for espresso drinks',
+    category: 'coffee',
     stock: 25,
     imageUrl: '/placeholder.svg'
   }
