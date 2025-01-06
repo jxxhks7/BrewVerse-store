@@ -2,10 +2,12 @@ import { useCart } from '@/context/CartContext';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const { state, dispatch } = useCart();
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleUpdateQuantity = (id: string, newQuantity: number, maxStock: number) => {
     if (newQuantity > maxStock) {
@@ -105,7 +107,10 @@ const Cart = () => {
               <span className="font-medium">Total:</span>
               <span className="font-bold">${calculateTotal().toFixed(2)}</span>
             </div>
-            <Button className="w-full mt-4">
+            <Button 
+              className="w-full mt-4"
+              onClick={() => navigate('/checkout-confirmation')}
+            >
               Proceed to Checkout
             </Button>
           </div>
