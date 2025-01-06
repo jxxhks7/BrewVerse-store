@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   price: number;
   description: string;
-  category: 'men' | 'women' | 'kids' | 'coffee';
+  category: 'coffee-beans' | 'coffee-makers' | 'teas' | 'brewing-accessories' | 'mugs-cups' | 'home-decor' | 'apparel';
   stock: number;
   imageUrl: string;
 }
@@ -16,4 +16,9 @@ export interface User {
   id: string;
   email: string;
   name: string;
+}
+
+export interface AuthResponse {
+  user: User | null;
+  error: Error | null;
 }
